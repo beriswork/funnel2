@@ -19,44 +19,40 @@ export default function Navbar() {
 
   return (
     <motion.nav
-      className={`fixed top-0 left-1/2 transform -translate-x-1/2 z-50 transition-all duration-300 ${
-        scrolled ? 'w-11/12 md:w-3/4 lg:w-2/3' : 'w-11/12'
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        scrolled ? 'bg-black bg-opacity-50 backdrop-filter backdrop-blur-lg' : 'bg-transparent'
       }`}
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.6 }}
     >
-      <div className={`mx-auto rounded-full transition-all duration-300 ${
-        scrolled ? 'bg-black bg-opacity-50 backdrop-filter backdrop-blur-lg' : 'bg-transparent'
-      }`}>
-        <div className="flex justify-between items-center h-16 px-6">
-          <Link href="/" className="flex items-center">
-            <Image src="/logo.png" alt="Logo" width={40} height={40} />
-            <span className="ml-2 text-2xl font-yellowtail text-white">YT for SaaS</span>
-          </Link>
-          <div className="hidden md:flex space-x-6">
-            {['Pricing', 'Contact', 'Blogs', 'API'].map((item) => (
-              <Link key={item} href="#" className="text-white hover:text-orange-500 transition-colors duration-200">
-                {item}
-              </Link>
-            ))}
-          </div>
-          <div className="hidden md:block">
-            <motion.button
-              className="bg-orange-500 text-white px-6 py-2 rounded-full font-medium hover:bg-orange-600 transition duration-300"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              Get Started
-            </motion.button>
-          </div>
-          <div className="md:hidden">
-            <button onClick={() => setIsOpen(!isOpen)}>
-              <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-              </svg>
-            </button>
-          </div>
+      <div className="max-w-7xl mx-auto flex justify-between items-center h-16 px-6 rounded-lg">
+        <Link href="/" className="flex items-center">
+          <Image src="/logo.png" alt="Logo" width={40} height={40} />
+          <span className="ml-2 text-2xl font-yellowtail text-white">YT for SaaS</span>
+        </Link>
+        <div className="hidden md:flex space-x-6">
+          {['Pricing', 'Contact', 'Blogs', 'API'].map((item) => (
+            <Link key={item} href="#" className="text-white hover:text-orange-500 transition-colors duration-200">
+              {item}
+            </Link>
+          ))}
+        </div>
+        <div className="hidden md:block">
+          <motion.button
+            className="bg-orange-500 text-white px-6 py-2 rounded-full font-medium hover:bg-orange-600 transition duration-300"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            Get Started
+          </motion.button>
+        </div>
+        <div className="md:hidden">
+          <button onClick={() => setIsOpen(!isOpen)}>
+            <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
         </div>
       </div>
       <AnimatePresence>
