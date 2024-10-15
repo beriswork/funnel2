@@ -11,7 +11,7 @@ const learningItems = [
   },
   {
     title: 'Video Optimization',
-    description: 'Learn SEO techniques to maximize your video\'s reach and engagement.',
+    description: 'Learn SEO techniques to maximize your video&apos;s reach and engagement.',
     icon: '🔍'
   },
   {
@@ -39,7 +39,7 @@ export default function WhatYoullLearn() {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          What You'll Learn
+          What You&apos;ll Learn
         </motion.h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {learningItems.map((item, index) => (

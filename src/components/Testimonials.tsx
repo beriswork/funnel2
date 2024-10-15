@@ -9,7 +9,7 @@ const testimonials = [
     name: 'John Doe',
     role: 'CEO, TechSaaS',
     image: 'https://via.placeholder.com/100',
-    quote: 'This program transformed our YouTube strategy. We\'ve seen a 300% increase in subscribers and a significant boost in product sign-ups.',
+    quote: 'This program transformed our YouTube strategy. We&apos;ve seen a 300% increase in subscribers and a significant boost in product sign-ups.',
   },
   {
     name: 'Jane Smith',
