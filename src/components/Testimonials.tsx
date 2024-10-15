@@ -18,7 +18,7 @@ const testimonials = [
     quote: 'The insights we gained were invaluable. Our YouTube channel is now our top source of qualified leads.',
   },
   {
-    name:  'Mike Johnson',
+    name: 'Mike Johnson',
     role: 'Founder, DataPro',
     image: 'https://via.placeholder.com/100',
     quote: 'I was skeptical at first, but the results speak for themselves. Our YouTube presence has become a game-changer for our SaaS business.',
@@ -67,7 +67,7 @@ export default function Testimonials() {
                 className="rounded-full mb-6 border-4 border-orange-500"
               />
               <p className="text-2xl italic mb-6 max-w-3xl">
-                "{testimonials[currentIndex].quote}"
+                &ldquo;{testimonials[currentIndex].quote}&rdquo;
               </p>
               <h3 className="font-semibold text-xl">{testimonials[currentIndex].name}</h3>
               <p className="text-orange-500">{testimonials[currentIndex].role}</p>

@@ -20,7 +20,7 @@ export default function Enroll() {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          Ready to Transform Your SaaS Company's YouTube Presence?
+          Ready to Transform Your SaaS Company&apos;s YouTube Presence?
         </motion.h2>
         <motion.p
           className="text-xl mb-12 max-w-3xl mx-auto"
